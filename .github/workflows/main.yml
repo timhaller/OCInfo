@@ -13,4 +13,4 @@ jobs:
       with:
         server: efps.ftp.infomaniak.com
         username: efps_e15
-        password: ${{ secrets.ftp_password }}
+        password: ${{ secrets.password }}
