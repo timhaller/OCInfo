@@ -1,0 +1,14 @@
+html {
+    font-family: "Verdana", sans-serif;
+    font-size: 16px;
+    background-color: lightgrey;
+    padding: 1rem;
+}
+
+body {
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    padding: 1em;
+    border: black 1px solid;
+}

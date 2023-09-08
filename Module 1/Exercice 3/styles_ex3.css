@@ -1,0 +1,73 @@
+html {
+    font-family: "Arial Narrow";
+    font-size: 16px;
+    background-image: url("img/neige.jpg");
+}
+
+body {
+    width: 800px;
+    padding: 20px;
+    background-color: pink;
+    border: 5px solid deeppink;
+    margin: 60px auto 0 auto;
+}
+
+th {
+    text-align: start;
+}
+
+h1 {
+    text-align: center;
+    color: deeppink;
+    font-size: 30px;
+    text-decoration: underline;
+}
+
+p {
+    text-align: justify;
+    font-style: italic;
+}
+
+.sub-title {
+    text-align: center;
+    color: darkblue;
+}
+
+.card {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: floralwhite;
+    border: 1px solid deeppink;
+}
+
+.card h1 {
+    text-align: start;
+    color: darkblue;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.card h2 {
+    font-size: 120%;
+}
+
+.card p {
+    text-align: justify;
+    color: grey
+}
+
+a {
+    width: 220px;
+    padding: 5px;
+}
+
+img {
+    width: 90%;
+}
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    color: green;
+    font-size: 15px;
+}

@@ -1,0 +1,17 @@
+img {
+    z-index: -1;
+}
+
+#marker {
+    width: 15px;
+    height: 15px;
+    overflow: hidden;
+}
+
+#text {
+    margin-left: 5px;
+}
+
+p {
+    font-family: sans-serif;
+}
