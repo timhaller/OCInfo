@@ -7,6 +7,10 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+        ref: ${{ github.head_ref }}
+        persist-credentials: false
       
     - name: ✨ Prettify code
       uses: creyD/prettier_action@v4.3
