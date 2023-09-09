@@ -50,6 +50,8 @@ img, .legende {
     background-color: white;
     display: block;
     align-content: end;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .legende {
