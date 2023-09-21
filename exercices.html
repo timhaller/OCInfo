@@ -1,59 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="exercices.css">
-    <link rel="icon" type="image/png" href="images/icon.png"/>
-</head>
-<body>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="exercices.css" />
+    <link rel="icon" type="image/png" href="images/icon.png" />
+  </head>
+  <body>
     <div class="navbar">
-        <h2>Accordion with symbols</h2>
-        <p>In this example we have added a "plus" sign to each button. When the user clicks on the button, the "plus" sign is replaced with a "minus" sign.</p>
-        <button class="accordion">Section 1</button>
-        <div class="panel">
-            <ul class="links">
-                <li>
-                    <a href="exercices/m01/ex1/">Exercice 1</a>
-                </li>
-                <li>
-                    <a href="exercices/m01/ex2/">Exercice 2</a>
-                </li>
-                <li>
-                    <a href="exercices/m01/ex3/">Exercice 3</a>
-                </li>
-                <li>
-                    <a href="exercices/m01/ex4/">Exercice 4</a>
-                </li>
-            </ul>
-        </div>
+      <h2>Accordion with symbols</h2>
+      <p>
+        In this example we have added a "plus" sign to each button. When the
+        user clicks on the button, the "plus" sign is replaced with a "minus"
+        sign.
+      </p>
+      <button class="accordion">Section 1</button>
+      <div class="panel">
+        <ul class="links">
+          <li>
+            <a href="exercices/m01/ex1/">Exercice 1</a>
+          </li>
+          <li>
+            <a href="exercices/m01/ex2/">Exercice 2</a>
+          </li>
+          <li>
+            <a href="exercices/m01/ex3/">Exercice 3</a>
+          </li>
+          <li>
+            <a href="exercices/m01/ex4/">Exercice 4</a>
+          </li>
+        </ul>
+      </div>
 
-        <button class="accordion">Section 2</button>
-        <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
+      <button class="accordion">Section 2</button>
+      <div class="panel">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
 
-        <button class="accordion">Section 3</button>
-        <div class="panel">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
+      <button class="accordion">Section 3</button>
+      <div class="panel">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+      </div>
     </div>
 
-<script>
-    var acc = document.getElementsByClassName("accordion");
-    var i;
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
 
-    for (i = 0; i < acc.length; i++) {
-        acc[i].addEventListener("click", function() {
-            this.classList.toggle("active");
-            var panel = this.nextElementSibling;
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            }
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function () {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          }
         });
-    }
-</script>
-
-</body>
+      }
+    </script>
+  </body>
 </html>
