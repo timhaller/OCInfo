@@ -10,7 +10,7 @@
     --hyperplexed-secondary-rgb: 42 252 152;
 
     --card-size: 480px;
-    --font-size: 0.8rem;
+    --font-size: 1rem;
     --logo-size: calc(var(--card-size) * 0.3);
 }
 
@@ -82,8 +82,6 @@ body {
 }
 
 .card-letters {
-    --x: 0px;
-    --y: 0px;
     position: absolute;
     left: 0px;
     top: 0px;
@@ -93,20 +91,19 @@ body {
     font-size: var(--font-size);
     font-weight: 500;
     word-wrap: break-word;
-    opacity: 0;
     transition: opacity 400ms;
-    -webkit-mask-image: radial-gradient(
-            calc(var(--card-size) * 0.8) circle at var(--x) var(--y),
-            rgb(255 255 255) 20%,
-            rgb(255 255 255 / 25%),
-            transparent
-    );
+    /*-webkit-mask-image: radial-gradient(*/
+    /*        calc(var(--card-size) * 0.8) circle at var(--x) var(--y),*/
+    /*        rgb(255 255 255) 20%,*/
+    /*        rgb(255 255 255 / 25%),*/
+    /*        transparent*/
+    /*);*/
     scale: 1.03;
 }
 
-.card:hover .card-letters {
-    opacity: 1;
-}
+/*.card:hover .card-letters {*/
+/*    opacity: 1;*/
+/*}*/
 
 @media(max-width: 600px) {
     :root {
