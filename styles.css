@@ -54,6 +54,7 @@ body {
     border-radius: 2rem;
     overflow: hidden;
     cursor: pointer;
+    background-color: #8698e4;
 }
 
 .card-image {

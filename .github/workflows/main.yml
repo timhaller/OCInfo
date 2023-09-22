@@ -11,17 +11,16 @@ jobs:
         fetch-depth: 0
         ref: ${{ github.head_ref }}
         persist-credentials: false
-      
+
     - name: ✨ Prettify code
       uses: creyD/prettier_action@v4.3
       with:
         prettier_options: --write **/*.{js,md,html}
         github_token: ${{ secrets.token }}
-    
+
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
         server: efps.ftp.infomaniak.com
         username: efps_e15
         password: ${{ secrets.password }}
-        dangerous-clean-slate: true
