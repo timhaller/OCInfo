@@ -20,20 +20,10 @@ function loop() {
 }
 
 function newlines(amount) {
-  let colors = [
-    "#ff0000",
-    "#00ff00",
-    "#0000ff",
-    "#ffff00",
-    "#00ffff",
-    "#ff00ff",
-  ];
   let str = "";
   for (let i = 0; i < amount; i++) {
     let newline =
-      `<span style='overflow: hidden; word-wrap: normal; color: ${
-        colors[Math.floor(Math.random() * colors.length)]
-      }'>` +
+      "<span style='overflow: hidden; word-wrap: normal'>" +
       randomString(100) +
       "</span> ";
     str += newline;
@@ -62,7 +52,7 @@ window.onload = () => {
     let startLines = Math.random() * (8 - 4) + 4;
     letters.innerHTML = `
             ${newlines(startLines)}
-            <span style="width: fit-content; background: darkgreen; word-wrap: normal">
+            <span style="width: fit-content; word-wrap: normal">
                 ${randomString(
                   30,
                 )}<span>&nbsp;<a href='exercices.html' style='color: white; display: inline'>Exercices</a>&nbsp;</span>${randomString(
