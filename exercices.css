@@ -1,9 +1,16 @@
 :root{
-    --text: #091906;
-    --background: #e6f8e2;
-    --primary: #8698e4;
-    --secondary: #bfeeb4;
-    --accent: #22c957;
+    --background-rgb: 2 6 23;
+    --background-light-rgb: 30 41 59;
+    --border-rgb: 255 255 255;
+    --border: 1px solid rgb(var(--border-rgb) / 20%);
+
+    --hyperplexed-main-rgb: 41 121 255;
+    --hyperplexed-main-light-rgb: 56 182 255;
+    --hyperplexed-secondary-rgb: 42 252 152;
+
+    --card-size: 480px;
+    --font-size: 1rem;
+    --logo-size: calc(var(--card-size) * 0.3);
 }
 
 *{
@@ -19,7 +26,7 @@ html {
 }
 
 body {
-    background-color: var(--background);
+    background-color: rgb(var(--background-rgb));
     display: flex;
     flex-direction: row;
     padding: 1rem;
@@ -28,8 +35,8 @@ body {
 }
 
 .navbar {
-    background-color: var(--secondary);
-    color: var(--text);
+    background-color: rgb(var(--background-light-rgb));
+    color: white;
     flex: 1;
     padding: 6px;
     border-radius: 12px;
@@ -51,39 +58,42 @@ body {
 }
 
 .accordion {
-    background-color: var(--accent);
-    color: var(--text);
+    background-color: rgb(var(--background-rgb));
+    color: white;
     cursor: pointer;
     padding: 10px;
     width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     border: none;
     border-radius: 12px;
     text-align: left;
     font-size: 15px;
-    transition: 0.4s;
+    transition: 0.4s ease;
 }
 
 .active, .accordion:hover {
-    background-color: --var(primary)
+    background-color: --var(--primary)
 }
 
-.accordion:after {
-    content: '\002B';
-    color: #777;
-    font-weight: bold;
-    float: right;
+.icon {
+    background-color: transparent;
+    color: white;
     margin-left: 5px;
+    margin-right: 5px;
+    transition: transform 0.4s ease;
 }
 
-.active:after {
-    content: "\2212";
+.icon:after {
+    transform: rotate(90deg);
 }
 
 .panel {
     padding: 0 18px;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-out;
+    transition: max-height 0.4s ease;
 }
 
 .preview {
