@@ -39,7 +39,19 @@ body {
 
 .card-wrapper {
     width: 100%;
-    position: relative;
+    height: 100%;
+    display: grid;
+    place-content: center;
+    position: absolute;
+}
+
+.button-wrapper {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 1rem;
 }
 
 .card {
@@ -54,7 +66,6 @@ body {
     border-radius: 2rem;
     overflow: hidden;
     cursor: pointer;
-    background-color: #8698e4;
 }
 
 .card-image {
@@ -69,25 +80,10 @@ body {
     width: var(--logo-size);
 }
 
-.card-gradient {
-    height: 100%;
-    width: 100%;
-    position: absolute;
-    background: radial-gradient(
-            rgb(var(--background-light-rgb)) 40%,
-            rgb(var(--hyperplexed-main-rgb)) 50%,
-            rgb(var(--hyperplexed-main-light-rgb)),
-            rgb(var(--hyperplexed-secondary-rgb))
-    );
-    mix-blend-mode: darken;
-    pointer-events: none;
-    z-index: 3;
-}
-
 .card-letters {
     position: absolute;
-    left: 0px;
-    top: 0px;
+    left: 0;
+    top: 0;
     height: 490px;
     width: 490px;
     color: white;
@@ -106,6 +102,14 @@ a {
 .button {
     width: 60px;
     height: 60px;
+    border: none;
+    background-color: transparent;
+    color: white;
+    opacity: 1;
+}
+
+.button:hover {
+    opacity: 0.6;
 }
 
 @media(max-width: 600px) {
@@ -117,3 +121,4 @@ a {
         border-radius: 1rem;
     }
 }
+
