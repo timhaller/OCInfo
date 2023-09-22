@@ -55,7 +55,6 @@ window.onload = () => {
 
     letters.onmouseleave = () => {
         animate = true
-        // !muted ? sound.play() : null;
         letters.style.color= "white"
     }
 }
