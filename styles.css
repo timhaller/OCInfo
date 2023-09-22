@@ -54,7 +54,6 @@ body {
     border-radius: 2rem;
     overflow: hidden;
     cursor: pointer;
-    background-color: #22c957;
 }
 
 .card-image {
@@ -91,7 +90,6 @@ body {
     height: 490px;
     width: 490px;
     color: white;
-    background-color: #8698e4;
     font-size: var(--font-size);
     font-weight: 500;
     word-wrap: break-word;
@@ -102,7 +100,6 @@ body {
 
 a {
     z-index: -1;
-    background-color: red;
 }
 
 .button {
