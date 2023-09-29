@@ -7,7 +7,6 @@ const randomChar = () => chars[Math.floor(Math.random() * (chars.length - 1))],
   randomString = (length) => Array.from(Array(length)).map(randomChar).join("");
 
 const letters = document.getElementById("card-letters");
-const card = document.getElementById("card");
 // const sound = document.getElementById('sound-effect');
 let muted = false;
 let animate = true;
@@ -42,7 +41,7 @@ function mute() {
 letters.innerText = randomString(1500);
 
 window.onload = () => {
-  setInterval(loop, 200);
+  setInterval(loop, 400);
 
   letters.onmouseenter = () => {
     animate = false;
