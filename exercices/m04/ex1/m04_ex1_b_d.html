@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>M04 : ex 1b, donnée</title>
+        <script>
+
+            "use strict";
+
+			var nb1 = 33;
+			var nb2 = 42;
+			var nb3 = -3;
+			var nb4 = 20986;
+			var nb5 = 89;
+
+
+/*
+Ecrivez la déclaration de la fonction additionnerEtAfficher(...) qui reçoit en paramètres trois nombres, x, y et z, et qui affiche la valeur de leur somme via une fenêtre alert en faisant apparaître un message de type :
+
+'La somme de 2, 3 et 4 est 9.'.
+ */
+            function additionnerEtAfficher(x,y,z){
+                alert("La somme de "+x+", "+y+" et "+z+" est "+(x+y+z)+".");
+            }
+
+
+/*
+Ecrivez l'instruction permettant de faire apparaître dans une fenêtre alert le message suivant :
+
+'La somme de 20986, 33 et -3 est 21016.'.
+
+Cette instruction doit comporter un appel à la fonction additionnerEtAfficher(...) et utiliser les variables globales adéquates déjà déclarées.
+ */
+
+
+            additionnerEtAfficher(nb4,nb1,nb3);
+
+
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

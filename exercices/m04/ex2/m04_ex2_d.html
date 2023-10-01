@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+
+        <meta charset="utf-8">
+        <title>M04 : ex 2, donnée</title>
+
+        <script>
+
+            "use strict";
+
+            //déclaration des variables globales :
+
+            let numeroTour = 1;
+            let position = 0;
+
+            // déclaration de la fonction lancerDe(), qui retourne une valeur entière
+            // entre 1 et 6, calculée de manière aléatoire
+
+            function lancerDe(){
+                return Math.floor(Math.random()*6)+1;
+            }
+
+            // déclaration de la fonction unTour(), qui gère toutes les opérations
+            // à effectuer en un tour de jeu et affiche la fenêtre alert qui donne
+            // le résultat de ce tour
+
+
+            function unTour(){
+                let de1 = lancerDe();
+                let de2 = lancerDe();
+
+                let sum = de1 == 3 || de2 == 3 ? (de1+de2) * 2 : de1 + de2;
+                sum = de1 == de2 ? -8 : sum;
+
+                Math.max(position += sum, 0)
+                alert("Tour n°"+numeroTour+" : le dé a fait "+sum+".\nVous êtes à la case n°"+position+".");
+                numeroTour++;
+            }
+
+            // déclaration de la fonction jeu(), qui gère l'ensemble d'une partie
+            // et affiche la fenêtre donnant le résultat final du jeu
+
+            function jeu(){
+                while(numeroTour <= 3 && position < 21){
+                    unTour();
+                }
+                position >= 21 ? alert("Vous avez gagné en "+(numeroTour-1)+" tours.") : alert("Vous avez perdu.");
+                alert("Vous avez gagné en "+(numeroTour-1)+" tours.");
+            }
+
+
+            // appel de la fonction jeu()
+
+            jeu();
+
+
+        </script>
+
+    </head>
+
+    <body>
+
+    </body>
+</html>

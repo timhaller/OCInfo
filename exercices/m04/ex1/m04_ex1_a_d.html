@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title>M04 : ex 1a, donnée</title>
+        <script>
+
+            let nb1 = 33;
+            let nb2 = 42;
+			let nb3 = -3;
+			let nb4 = 20986;
+			let nb5 = 89;
+
+
+/*
+Ecrivez la déclaration de la fonction multiplier(...) qui reçoit en paramètres trois nombres, x, y et z, et qui retourne le produit de ces trois nombres.
+
+Par exemple :
+- L'appel multiplier(2,3,4) retourne la valeur 24.
+- L'appel multiplier(-2.1,3.2,4.6) retourne la valeur -30.912.
+
+ */
+
+            function multiplier(x,y,z){
+                return x*y*z;
+            }
+
+
+/*
+Ecrivez l'instruction permettant de faire apparaître dans une fenêtre alert le message suivant :
+
+'Le résultat de la multiplication de 33, 42 et -3 est -4158.'.
+
+Cette instruction doit comporter un appel à la fonction multiplier(...) et utiliser les variables globales adéquates déjà déclarées.
+ */
+
+            alert("Le résultat de la multiplication de "+nb1+", "+nb2+" et "+nb3+" est "+multiplier(nb1,nb2,nb3)+".");
+
+
+
+
+        </script>
+    </head>
+    <body>
+    </body>
+</html>
