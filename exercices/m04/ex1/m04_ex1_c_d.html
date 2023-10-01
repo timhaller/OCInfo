@@ -1,33 +1,30 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <title>M04 : ex 1c, donnée</title>
-        <script>
+  <head>
+    <meta charset="utf-8" />
+    <title>M04 : ex 1c, donnée</title>
+    <script>
+      "use strict";
 
-            "use strict";
+      var nb1 = 33;
+      var nb2 = 42;
+      var nb3 = -3;
+      var nb4 = 20986;
+      var nb5 = 89;
 
-			var nb1 = 33;
-			var nb2 = 42;
-			var nb3 = -3;
-			var nb4 = 20986;
-			var nb5 = 89;
-
-
- /*
+      /*
 Ecrivez la déclaration de la fonction verifierParite(...) qui reçoit en paramètre un nombre et qui renvoie true si ce nombre est pair et false sinon.
  */
 
-            function verifierParite(x){
-                if(x%2==0){
-                    return true;
-                }else{
-                    return false;
-                }
-            }
+      function verifierParite(x) {
+        if (x % 2 == 0) {
+          return true;
+        } else {
+          return false;
+        }
+      }
 
- /*
+      /*
 Ecrivez la déclaration de la fonction afficherParite(...) qui reçoit en paramètre un nombre et qui construit et renvoie une chaîne de caractères de type :
 
 'Le nombre 42 est pair.'
@@ -36,12 +33,13 @@ Ecrivez la déclaration de la fonction afficherParite(...) qui reçoit en param�
 Cette déclaration doit comporter un appel à la fonction verifierParite(...).
 La variable texte doit être construite de manière élégante : le même texte ne doit pas être répété dans plusieurs expressions...
  */
-            function afficherParite(x) {
-                return "Le nombre "+x+" est "+(verifierParite(x)?"pair.":"impair.");
-            }
+      function afficherParite(x) {
+        return (
+          "Le nombre " + x + " est " + (verifierParite(x) ? "pair." : "impair.")
+        );
+      }
 
-
-/*
+      /*
 Ecrivez les instructions permettant de faire apparaître dans deux fenêtres alert successives les messages suivants :
 
 'Le nombre 33 est impair.'
@@ -49,13 +47,9 @@ Ecrivez les instructions permettant de faire apparaître dans deux fenêtres ale
 
 Cette instruction doit comporter un appel à la fonction verifierParite(...) et/ou à la fonction afficherParite(...) et utiliser les variables globales adéquates déjà déclarées.
  */
-            alert(afficherParite(nb1));
-            alert(afficherParite(nb4));
-
-
-
-        </script>
-    </head>
-    <body>
-    </body>
+      alert(afficherParite(nb1));
+      alert(afficherParite(nb4));
+    </script>
+  </head>
+  <body></body>
 </html>

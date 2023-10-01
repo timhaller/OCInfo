@@ -1,65 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-    <head>
+  <head>
+    <meta charset="utf-8" />
+    <title>M04 : ex 2, donnée</title>
 
-        <meta charset="utf-8">
-        <title>M04 : ex 2, donnée</title>
+    <script>
+      "use strict";
 
-        <script>
+      //déclaration des variables globales :
 
-            "use strict";
+      let numeroTour = 1;
+      let position = 0;
 
-            //déclaration des variables globales :
+      // déclaration de la fonction lancerDe(), qui retourne une valeur entière
+      // entre 1 et 6, calculée de manière aléatoire
 
-            let numeroTour = 1;
-            let position = 0;
+      function lancerDe() {
+        return Math.floor(Math.random() * 6) + 1;
+      }
 
-            // déclaration de la fonction lancerDe(), qui retourne une valeur entière
-            // entre 1 et 6, calculée de manière aléatoire
+      // déclaration de la fonction unTour(), qui gère toutes les opérations
+      // à effectuer en un tour de jeu et affiche la fenêtre alert qui donne
+      // le résultat de ce tour
 
-            function lancerDe(){
-                return Math.floor(Math.random()*6)+1;
-            }
+      function unTour() {
+        let de1 = lancerDe();
+        let de2 = lancerDe();
 
-            // déclaration de la fonction unTour(), qui gère toutes les opérations
-            // à effectuer en un tour de jeu et affiche la fenêtre alert qui donne
-            // le résultat de ce tour
+        let sum = de1 == 3 || de2 == 3 ? (de1 + de2) * 2 : de1 + de2;
+        sum = de1 == de2 ? -8 : sum;
 
+        Math.max((position += sum), 0);
+        alert(
+          "Tour n°" +
+            numeroTour +
+            " : le dé a fait " +
+            sum +
+            ".\nVous êtes à la case n°" +
+            position +
+            ".",
+        );
+        numeroTour++;
+      }
 
-            function unTour(){
-                let de1 = lancerDe();
-                let de2 = lancerDe();
+      // déclaration de la fonction jeu(), qui gère l'ensemble d'une partie
+      // et affiche la fenêtre donnant le résultat final du jeu
 
-                let sum = de1 == 3 || de2 == 3 ? (de1+de2) * 2 : de1 + de2;
-                sum = de1 == de2 ? -8 : sum;
+      function jeu() {
+        while (numeroTour <= 3 && position < 21) {
+          unTour();
+        }
+        position >= 21
+          ? alert("Vous avez gagné en " + (numeroTour - 1) + " tours.")
+          : alert("Vous avez perdu.");
+        alert("Vous avez gagné en " + (numeroTour - 1) + " tours.");
+      }
 
-                Math.max(position += sum, 0)
-                alert("Tour n°"+numeroTour+" : le dé a fait "+sum+".\nVous êtes à la case n°"+position+".");
-                numeroTour++;
-            }
+      // appel de la fonction jeu()
 
-            // déclaration de la fonction jeu(), qui gère l'ensemble d'une partie
-            // et affiche la fenêtre donnant le résultat final du jeu
+      jeu();
+    </script>
+  </head>
 
-            function jeu(){
-                while(numeroTour <= 3 && position < 21){
-                    unTour();
-                }
-                position >= 21 ? alert("Vous avez gagné en "+(numeroTour-1)+" tours.") : alert("Vous avez perdu.");
-                alert("Vous avez gagné en "+(numeroTour-1)+" tours.");
-            }
-
-
-            // appel de la fonction jeu()
-
-            jeu();
-
-
-        </script>
-
-    </head>
-
-    <body>
-
-    </body>
+  <body></body>
 </html>

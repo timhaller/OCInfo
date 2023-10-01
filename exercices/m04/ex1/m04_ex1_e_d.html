@@ -1,14 +1,12 @@
-
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <title>M04 : ex 1e, donnée</title>
-        <script>
+  <head>
+    <meta charset="utf-8" />
+    <title>M04 : ex 1e, donnée</title>
+    <script>
+      "use strict";
 
-            "use strict";
-
-/*
+      /*
 Ecrivez la déclaration de la fonction genererNbreAleatoire(...) qui reçoit en paramètres deux nombres, x et y, et qui retourne un nombre aléatoire compris entre ces deux nombres (bornes comprises).
 
 Par exemple :
@@ -16,14 +14,13 @@ Par exemple :
 - L'appel genererNbreAleatoire(-3,0) retourne la valeur -3, -2, -1, ou 0 avec une probabilité égale.
  */
 
-            function genererNbreAleatoire(x,y){
-                var min = Math.min(x,y);
-                var max = Math.max(x,y);
-                return Math.floor(Math.random()*(max-min+1))+min;
-            }
+      function genererNbreAleatoire(x, y) {
+        var min = Math.min(x, y);
+        var max = Math.max(x, y);
+        return Math.floor(Math.random() * (max - min + 1)) + min;
+      }
 
-
-/*
+      /*
 Ecrivez la déclaration de la fonction controlerNbresEtAfficher(...) qui
 
 - demande à l'utilisateur (via deux fenêtres prompt successives) de lui fournir deux nombres entiers.
@@ -37,29 +34,35 @@ Ecrivez la déclaration de la fonction controlerNbresEtAfficher(...) qui
 Exemple de message : 'Le nombre généré aléatoirement entre -34 et 45 est -14.'
  */
 
-                function controlerNbresEtAfficher(){
-                    var nb1 = prompt("Entrez un nombre entier.");
-                    var nb2 = prompt("Entrez un autre nombre entier.");
-                    if(isNaN(nb1) || isNaN(nb2)){
-                        alert("Vous n'avez pas entré de nombre.");
-                    }else if(!Number.isInteger(Number(nb1)) || !Number.isInteger(Number(nb2))){
-                        alert("Vous n'avez pas entré de nombre entier.");
-                    }else{
-                        alert("Le nombre généré aléatoirement entre "+nb1+" et "+nb2+" est "+genererNbreAleatoire(nb1,nb2)+".");
-                    }
-                }
+      function controlerNbresEtAfficher() {
+        var nb1 = prompt("Entrez un nombre entier.");
+        var nb2 = prompt("Entrez un autre nombre entier.");
+        if (isNaN(nb1) || isNaN(nb2)) {
+          alert("Vous n'avez pas entré de nombre.");
+        } else if (
+          !Number.isInteger(Number(nb1)) ||
+          !Number.isInteger(Number(nb2))
+        ) {
+          alert("Vous n'avez pas entré de nombre entier.");
+        } else {
+          alert(
+            "Le nombre généré aléatoirement entre " +
+              nb1 +
+              " et " +
+              nb2 +
+              " est " +
+              genererNbreAleatoire(nb1, nb2) +
+              ".",
+          );
+        }
+      }
 
-
-/*
+      /*
 Ecrivez l'instruction qui permet de lancer le programme.
  */
 
-                controlerNbresEtAfficher();
-
-
-
-        </script>
-    </head>
-    <body>
-    </body>
+      controlerNbresEtAfficher();
+    </script>
+  </head>
+  <body></body>
 </html>
