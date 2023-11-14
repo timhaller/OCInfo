@@ -22,7 +22,9 @@
 html {
     padding: 0;
     margin: 0;
-    font-family: "Helvetica", sans-serif;
+    color: lawngreen;
+    font-family: 'Source Sans 3', sans-serif;
+    user-select: none;
 }
 
 body {
@@ -34,81 +36,78 @@ body {
     height: 100vh;
 }
 
-.navbar {
-    background-color: rgb(var(--background-light-rgb));
-    color: white;
-    flex: 1;
-    padding: 6px;
+#terminal {
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+    height: fit-content;
     border-radius: 12px;
-    max-width: 400px;
+    box-sizing: border-box;
+    background-color: #1f1f1f;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#navbar {
+    height: 30px;
+    background: lightgray;
+    border-radius: 5px 5px 0 0;
     display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+    align-items: center;
+    flex-direction: row;
 }
 
-.navbar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    gap: 6px;
+#navbar .button {
+    display: grid;
+    place-items: center;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    margin: 0 5px;
+    z-index: 1;
 }
 
-.navbar li{
-    padding:0 10px;
+#navbar .button.red {
+    background: #ff5f56;
 }
 
-.accordion {
-    background-color: rgb(var(--background-rgb));
-    color: white;
-    cursor: pointer;
+#terminal-text {
+    height: fit-content;
+    max-height: 400px;
     padding: 10px;
-    width: 100%;
+    overflow-y: scroll;
+}
+
+#input-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    border: none;
-    border-radius: 12px;
-    text-align: left;
-    font-size: 15px;
-    transition: 0.4s ease;
+    align-items: baseline;
 }
 
-.active, .accordion:hover {
-    background-color: --var(--primary)
-}
-
-.icon {
+#input {
+    flex: 1;
+    padding: 5px;
+    height: fit-content;
     background-color: transparent;
-    color: white;
-    margin-left: 5px;
-    margin-right: 5px;
-    transition: transform 0.4s ease;
+    border: none;
+    outline: none;
+    color: lawngreen;
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 1rem;
 }
 
-.icon:after {
-    transform: rotate(90deg);
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
 }
 
-.panel {
-    padding: 0 18px;
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
+.cursor {
+    background: lawngreen;
+    width: 2px;
+    height: 1rem;
+    margin: 0 2px 0 2px;
+    display: inline-block;
+    transform: translateY(2px);
+    animation: blink 1s step-start infinite;
 }
 
-.preview {
-    flex: 3;
-    height: 100%;
-    display: grid;
-    place-content: center;
-    background-color: red;
-}
-
-a {
-    color: var(--primary);
-    text-decoration: none;
-}
-
-a:visited {
-    color: blue;
-}
