@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   //alert
   function customAlert(text = "") {
-      terminalOutput.innerHTML += `<p>${text}</p>`;
+    terminalOutput.innerHTML += `<p>${text}</p>`;
   }
 
   //since window.alert is a function, we can override it
@@ -37,10 +37,10 @@ document.addEventListener("DOMContentLoaded", async function () {
           resolve(command);
         }
       });
-    })
+    });
   }
 
-    //confirm
+  //confirm
   async function customConfirm(text = "") {
     return new Promise((resolve) => {
       terminalOutput.innerHTML += `<span id="confirmLine"><span>${text} [Y/n]</span> <input type="text" id="confirm" /></span>`;
@@ -59,7 +59,7 @@ document.addEventListener("DOMContentLoaded", async function () {
           resolve(accepted);
         }
       });
-    })
+    });
   }
 
   function writePath(text) {
@@ -76,8 +76,8 @@ document.addEventListener("DOMContentLoaded", async function () {
     return list.find((element) => element.name === path) !== undefined;
   }
 
-  const commands = ['hello', 'ls', 'cd', 'open']; // Predefined commands for autocompletion
-  const paths = ['module', 'exercice']; // Predefined paths for autocompletion
+  const commands = ["hello", "ls", "cd", "open"]; // Predefined commands for autocompletion
+  const paths = ["module", "exercice"]; // Predefined paths for autocompletion
 
   async function processCommand(command) {
     // Add your command processing logic here
@@ -133,17 +133,21 @@ document.addEventListener("DOMContentLoaded", async function () {
         console.log(await prompt("Enter your name: "));
         break;
       case "confirm":
-        const accepted = await customConfirm("Are you sure?").then((res) => console.log(res));
+        const accepted = await customConfirm("Are you sure?").then((res) =>
+          console.log(res),
+        );
         break;
       case "run":
-        let newScript = document.createElement('script');
-        newScript.type = 'text/javascript';
-        newScript.src = './alert.js';
-        document.getElementsByTagName('head')[0].appendChild(newScript);
+        let newScript = document.createElement("script");
+        newScript.type = "text/javascript";
+        newScript.src = "./alert.js";
+        document.getElementsByTagName("head")[0].appendChild(newScript);
         break;
       case "rm":
         if (command[1] === "-rf") {
-          const confirmed = await customConfirm("Are you sure?").then((res) => res);
+          const confirmed = await customConfirm("Are you sure?").then(
+            (res) => res,
+          );
           if (confirmed) {
             writeToTerminal("Deleted");
             document.cookie = "deleted=true";
@@ -168,20 +172,22 @@ document.addEventListener("DOMContentLoaded", async function () {
       await processCommand(fullCommand);
       inputField.value = "";
     } else if (event.key === "Tab") {
-      event.preventDefault()
+      event.preventDefault();
       let currentInput = inputField.value.toLowerCase();
-      const matchingCommands = commands.filter(cmd => cmd.startsWith(currentInput));
+      const matchingCommands = commands.filter((cmd) =>
+        cmd.startsWith(currentInput),
+      );
 
       if (matchingCommands.length === 1) {
         inputField.value = matchingCommands[0] + " ";
       }
 
-      currentInput = currentInput.split(' ')
-      console.log(currentInput)
-      const matchingPaths = paths.filter(p => p.startsWith(currentInput[1]));
+      currentInput = currentInput.split(" ");
+      console.log(currentInput);
+      const matchingPaths = paths.filter((p) => p.startsWith(currentInput[1]));
 
       if (matchingPaths.length === 1) {
-        inputField.value = currentInput[0] + ' ' + matchingPaths[0];
+        inputField.value = currentInput[0] + " " + matchingPaths[0];
       }
     }
   });
