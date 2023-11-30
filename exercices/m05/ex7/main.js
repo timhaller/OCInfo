@@ -1,12 +1,12 @@
-const n = askForNumber("Entrez un nombre: ", "N");
+const n = askForNumber("Enter a number: ", "N");
 
-let grid = "";
+let table = ""
 for (let y = 1; y <= n; y++) {
+  let row = "";
   for (let x = 1; x <= n; x++) {
-    grid += (x + y) % 2 === 0 ? "X" : "O";
+    row += (x + y) % 2 === 0 ? "X" : "O";
   }
-  grid += "\n";
+  table += row + "\n";
 }
-console.log(grid);
 
-alert(grid);
+alert(table);

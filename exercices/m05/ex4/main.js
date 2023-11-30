@@ -1,4 +1,4 @@
-const num = askForNumber("Entrez un nombre: ", "N");
+let num = askForNumber("Entrez un nombre: ", "N");
 const multiples = askForNumber("Entrez le nombre de multiples: ", "N");
 
 let msg = "";

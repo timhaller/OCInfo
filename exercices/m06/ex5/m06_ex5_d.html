@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8">
+        <title> module 06, exercice 5 : donnée </title>
+        <script>
+
+            "use strict";
+
+            //déclaration de la fonction determinerNbresPairs(tN)
+            function determinerNbresPairs(tN){
+                let tP = [];
+                for (let i=0; i<tN.length; i++){
+                    if (tN[i]%2===0){
+                        tP.push(tN[i]);
+                    }
+                }
+                alert("Les nombres pairs du tableau sont \n" + tP);
+            }
+
+            //test de la fonction determinerNbresPairs(tN)
+            determinerNbresPairs([6,9,1,23,45,6,2,7,0,1246]);
+
+        </script>
+    </head>
+    <body>
+
+    </body>
+</html>
