@@ -7,17 +7,9 @@ var nb4 = 20986;
 var nb5 = 89;
 
 function additionnerEtAfficher(x, y, z) {
-    alert(
-        "La somme de " +
-        x +
-        ", " +
-        y +
-        " et " +
-        z +
-        " est " +
-        (x + y + z) +
-        ".",
-    );
+  alert(
+    "La somme de " + x + ", " + y + " et " + z + " est " + (x + y + z) + ".",
+  );
 }
 
 additionnerEtAfficher(nb4, nb1, nb3);

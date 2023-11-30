@@ -2,11 +2,11 @@
 
 //déclaration de la fonction racineCubique(tN)
 function racineCubique(tN) {
-    let tR = [];
-    for (let i = 0; i < tN.length; i++) {
-        tR[i] = Math.cbrt(tN[i]).toFixed(1);
-    }
-    return tR;
+  let tR = [];
+  for (let i = 0; i < tN.length; i++) {
+    tR[i] = Math.cbrt(tN[i]).toFixed(1);
+  }
+  return tR;
 }
 
 //test de la fonction racineCubique(tN)

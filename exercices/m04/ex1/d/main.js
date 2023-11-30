@@ -7,11 +7,11 @@ var nb4 = 20986;
 var nb5 = 89;
 
 function calculValeurAbsolueDifference(x, y) {
-    if (x > y) {
-        return x - y;
-    } else {
-        return y - x;
-    }
+  if (x > y) {
+    return x - y;
+  } else {
+    return y - x;
+  }
 }
 
 alert(calculValeurAbsolueDifference(nb4, nb3));

@@ -5,11 +5,11 @@ let nb4 = 20986;
 let nb5 = 89;
 
 function multiplier(x, y, z) {
-    return x * y * z;
+  return x * y * z;
 }
 
 alert(
-    "Le résultat de la multiplication de " +
+  "Le résultat de la multiplication de " +
     nb1 +
     ", " +
     nb2 +
