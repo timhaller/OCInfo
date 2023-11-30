@@ -9,31 +9,293 @@
         {
           "name" : "exercice1",
           "path" : "exercices/m01/ex1",
-          "title" : "Exercice 1",
-          "description" : "Exercice 1 description",
+          "title" : "Poulpes",
           "jsOnly": false
         },
         {
-          "name" : "exercice2",
-          "path" : "exercices/m01/ex1",
-          "title" : "Exercice 1",
-          "description" : "Exercice 2 description",
+          "name" : "exercice3",
+          "path" : "exercices/m01/ex3",
+          "title" : "Villes d'Europe",
+          "jsOnly": false
+        },
+        {
+          "name" : "exercice4",
+          "path" : "exercices/m01/ex4/blog.html",
+          "title" : "Blog",
           "jsOnly": false
         }
       ]
     },
     {
       "name" : "module2",
-      "path" : "exercices/m01",
-      "title" : "Module 1",
-      "description" : "Module 1 description",
+      "path" : "exercices/m02",
+      "title" : "Module 2",
+      "description" : "Module 2 description",
       "exercices": [
         {
           "name" : "exercice1",
-          "path" : "exercices/m01/ex1",
-          "title" : "Exercice 1",
-          "description" : "Exercice 1 description",
-          "jsOnly": false
+          "path" : "exercices/m02/ex1",
+          "title" : "Nom Prénom",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice1",
+          "path" : "exercices/m02/ex2",
+          "title" : "Addition de variables",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice1",
+          "path" : "exercices/m02/ex3",
+          "title" : "Opérations sur les variables",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice1",
+          "path" : "exercices/m02/ex4",
+          "title" : "Switch de variables",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice1",
+          "path" : "exercices/m02/ex5",
+          "title" : "Fonctions",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice1",
+          "path" : "exercices/m02/ex6",
+          "title" : "Librairie Math",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice1",
+          "path" : "exercices/m02/ex7",
+          "title" : "Pythagore",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice1",
+          "path" : "exercices/m02/ex8",
+          "title" : "Nombres aléatoires",
+          "jsOnly": true
+        }
+      ]
+    },
+    {
+      "name" : "module3",
+      "path" : "exercices/m03",
+      "title" : "Module 3",
+      "description" : "Module 3 description",
+      "exercices": [
+        {
+          "name" : "exercice1",
+          "path" : "exercices/m03/ex1",
+          "title" : "Comparer deux nombres",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice2",
+          "path" : "exercices/m03/ex2",
+          "title" : "Comparer trois nombres",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice3",
+          "path" : "exercices/m03/ex3",
+          "title" : "Devinez le nombre!",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice4",
+          "path" : "exercices/m03/ex4",
+          "title" : "Viète...",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice5",
+          "path" : "exercices/m03/ex5",
+          "title" : "Yahtzee!",
+          "jsOnly": true
+        }
+      ]
+    },
+    {
+      "name" : "module4",
+      "path" : "exercices/m04",
+      "title" : "Module 4",
+      "description" : "Module 4 description",
+      "exercices": [
+        {
+          "name" : "exercice1a",
+          "path" : "exercices/m04/ex1/a",
+          "title" : "Multiplier trois nombres",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice1b",
+          "path" : "exercices/m04/ex1/b",
+          "title" : "Additionner et afficher",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice1c",
+          "path" : "exercices/m04/ex1/c",
+          "title" : "Parité",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice1d",
+          "path" : "exercices/m04/ex1/d",
+          "title" : "Valeur absolue",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice1e",
+          "path" : "exercices/m04/ex1/e",
+          "title" : "Nombre aléatoire",
+          "jsOnly": true
+        }
+      ]
+    },
+    {"name" : "module5",
+      "path" : "exercices/m05",
+      "title" : "Module 5",
+      "description" : "Module 5 description",
+      "exercices": [
+        {
+          "name" : "exercice1",
+          "path" : "exercices/m05/ex1",
+          "title" : "Numéros entre deux nombres",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice2",
+          "path" : "exercices/m05/ex2",
+          "title" : "Entrée d'un nombre",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice3",
+          "path" : "exercices/m05/ex3",
+          "title" : "Numéros entre deux nombres (bis)",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice4",
+          "path" : "exercices/m05/ex4",
+          "title" : "Multiples d'un nombre",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice5",
+          "path" : "exercices/m05/ex5",
+          "title" : "Multiplies de 12",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice6",
+          "path" : "exercices/m05/ex6",
+          "title" : "N factoriel",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice7",
+          "path" : "exercices/m05/ex7",
+          "title" : "xoxo",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice8a",
+          "path" : "exercices/m05/ex8/a",
+          "title" : "Battaille",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice8b",
+          "path" : "exercices/m05/ex8/b",
+          "title" : "Battaille (pro)",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice9",
+          "path" : "exercices/m05/ex9",
+          "title" : "Devinez le nombre! (bis)",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice10",
+          "path" : "exercices/m05/ex10",
+          "title" : "Nombres entre deux nombres (ter)",
+          "jsOnly": true
+        },
+        {
+          "name" : "exercice11",
+          "path" : "exercices/m05/ex11",
+          "title" : "Interets composés",
+          "jsOnly": true
+        }
+      ]
+    },
+    {
+      "name": "module5",
+      "path": "exercices/m05",
+      "title": "Module 5",
+      "description": "Module 5 description",
+      "exercices": [
+        {
+          "name": "exercice1",
+          "path": "exercices/m06/ex1",
+          "title": "Afficher un élément d'un tableau",
+          "jsOnly": true
+        },
+        {
+          "name": "exercice2",
+          "path": "exercices/m06/ex2",
+          "title": "Racine cubique d'un tableau",
+          "jsOnly": true
+        },
+        {
+          "name": "exercice3",
+          "path": "exercices/m06/ex3",
+          "title": "Réunion de tableaux",
+          "jsOnly": true
+        },
+        {
+          "name": "exercice4a",
+          "path": "exercices/m06/ex4/a",
+          "title": "Sous-tableau",
+          "jsOnly": true
+        },
+        {
+          "name": "exercice4b",
+          "path": "exercices/m06/ex4/b",
+          "title": "Sous-tableau (bis)",
+          "jsOnly": true
+        },
+        {
+          "name": "exercice5",
+          "path": "exercices/m06/ex5",
+          "title": "Trouver les éléments pairs d'un tableau",
+          "jsOnly": true
+        },
+        {
+          "name": "exercice6",
+          "path": "exercices/m06/ex6",
+          "title": "Occurences",
+          "jsOnly": true
+        },
+        {
+          "name": "exercice7",
+          "path": "exercices/m06/ex7",
+          "title": "Obstgarten",
+          "jsOnly": true
+        },
+        {
+          "name": "exercice8",
+          "path": "exercices/m06/ex8",
+          "title": "Cesar",
+          "jsOnly": true
         }
       ]
     }

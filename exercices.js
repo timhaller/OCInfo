@@ -94,7 +94,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
   await inputField.addEventListener("keydown", async function (event) {
     if (event.key === "Enter") {
-      let command = inputField.value.trim();
+      let command = inputField.value.trim().toLowerCase();
       writeToTerminal(`<span>$</span> ${command}`);
       let fullCommand = command.split(" ");
       await processCommand(fullCommand);
