@@ -111,14 +111,29 @@ document.addEventListener("DOMContentLoaded", async function () {
 
       if (matchingCommands.length === 1) {
         inputField.value = matchingCommands[0] + " ";
+        return;
       }
+
+      let command = inputField.value.split(" ")[0];
+      console.log("command", command);
 
       currentInput = currentInput.split(" ");
       console.log(currentInput);
-      const matchingPaths = paths.filter((p) => p.startsWith(currentInput[1]));
+      let matchingPaths = paths.filter((p) => p.startsWith(currentInput[1]));
 
       if (matchingPaths.length === 1) {
-        inputField.value = currentInput[0] + " " + matchingPaths[0];
+        inputField.value = command + " " + matchingPaths[0];
+        return;
+      }
+
+      let directory = currentInput[1].split("/")[0];
+
+      currentInput = currentInput[1].split("/");
+      console.log(currentInput);
+      matchingPaths = paths.filter((p) => p.startsWith(currentInput[1]));
+
+      if (matchingPaths.length === 1) {
+        inputField.value = command + " " + directory + "/" + matchingPaths[0];
       }
     }
   });
