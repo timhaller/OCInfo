@@ -1,69 +1,63 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <title> module 06, exercice 6 : donnée </title>
-        <script src="/utils/basicFunctions.js"></script>
-        <script>
+  <head>
+    <meta charset="utf-8" />
+    <title>module 06, exercice 6 : donnée</title>
+    <script src="/utils/basicFunctions.js"></script>
+    <script>
+      "use strict";
 
-            "use strict";
+      //déclaration des fonctions
 
-            //déclaration des fonctions
-
-/*
+      /*
             Cette fonction crée un tableau contenant 500 nombres entiers
             entre 1 et 10 générés aléatoirement avec la même probabilité
             et renvoie le tableau créé.
  */
 
-            function genererTableauNombreAlea() {
-                let t = [];
-                for (let i=0; i<500; i++){
-                    t[i] = Math.floor(Math.random()*10)+1;
-                }
-                return t;
-            }
+      function genererTableauNombreAlea() {
+        let t = [];
+        for (let i = 0; i < 500; i++) {
+          t[i] = Math.floor(Math.random() * 10) + 1;
+        }
+        return t;
+      }
 
-/*
+      /*
             Cette fonction reçoit en arguments un tableau de nombres (t) et un nombre (x).
             Elle renvoie un nombre entier qui correspond au nombre de fois
             où le nombre x apparaît dans le tableau t.
             Par exemple, si t=[5,4,78,4,9,4] et x=4, la fonction renvoie la valeur 3.
  */
 
-            function compterNombre(t) {
-                let tn = [0,0,0,0,0,0,0,0,0,0];
-                for (let num in t){
-                    tn[t[num] - 1] += 1;
-                }
-                return tn;
-            }
+      function compterNombre(t) {
+        let tn = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
+        for (let num in t) {
+          tn[t[num] - 1] += 1;
+        }
+        return tn;
+      }
 
-/*
+      /*
             Cette fonction contient les instructions permettant de construire et
             d'afficher le texte apparaissant dans la fenêtre alert. En particulier,
             elle contient les appels adéquats aux fonctions genererTableauNombreAlea()
             et compterNombre(t,x).
  */
 
-            function init(){
-                let t = genererTableauNombreAlea();
-                let tn = compterNombre(t);
-                let msg = "Le tableau contient les éléments suivants : \n";
-                for (let i=0; i<tn.length; i++){
-                    msg += (i+1) + " : " + tn[i] + "\n";
-                }
-                alert(msg);
-            }
+      function init() {
+        let t = genererTableauNombreAlea();
+        let tn = compterNombre(t);
+        let msg = "Le tableau contient les éléments suivants : \n";
+        for (let i = 0; i < tn.length; i++) {
+          msg += i + 1 + " : " + tn[i] + "\n";
+        }
+        alert(msg);
+      }
 
-            //lancement du programme
-            init();
-
-
-
-
-        </script>
-    </head>
-    <body>
-    </body>
+      //lancement du programme
+      init();
+    </script>
+  </head>
+  <body></body>
 </html>
