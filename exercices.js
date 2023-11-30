@@ -19,13 +19,16 @@ document.addEventListener("DOMContentLoaded", async function () {
     return list.find((element) => element.name === path) !== undefined;
   }
 
-  const commands = ["hello", "ls", "cd", "open", "clear", "rm"]; // Predefined commands for autocompletion
+  const commands = ["hello", "ls", "cd", "open", "clear", "rm", "help"]; // Predefined commands for autocompletion
   const paths = ["module", "exercice"]; // Predefined paths for autocompletion
 
   async function processCommand(command) {
     switch (command[0]) {
       case "hello":
         writeToTerminal("Hello World!");
+        break;
+      case "help":
+        open("/help.pdf")
         break;
       case "ls":
         let dirToList = command[1] || path;

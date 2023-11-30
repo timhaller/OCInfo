@@ -39,43 +39,43 @@
           "jsOnly": true
         },
         {
-          "name" : "exercice1",
+          "name" : "exercice2",
           "path" : "exercices/m02/ex2",
           "title" : "Addition de variables",
           "jsOnly": true
         },
         {
-          "name" : "exercice1",
+          "name" : "exercice3",
           "path" : "exercices/m02/ex3",
           "title" : "Opérations sur les variables",
           "jsOnly": true
         },
         {
-          "name" : "exercice1",
+          "name" : "exercice4",
           "path" : "exercices/m02/ex4",
           "title" : "Switch de variables",
           "jsOnly": true
         },
         {
-          "name" : "exercice1",
+          "name" : "exercice5",
           "path" : "exercices/m02/ex5",
           "title" : "Fonctions",
           "jsOnly": true
         },
         {
-          "name" : "exercice1",
+          "name" : "exercice6",
           "path" : "exercices/m02/ex6",
           "title" : "Librairie Math",
           "jsOnly": true
         },
         {
-          "name" : "exercice1",
+          "name" : "exercice7",
           "path" : "exercices/m02/ex7",
           "title" : "Pythagore",
           "jsOnly": true
         },
         {
-          "name" : "exercice1",
+          "name" : "exercice8",
           "path" : "exercices/m02/ex8",
           "title" : "Nombres aléatoires",
           "jsOnly": true
@@ -238,7 +238,7 @@
       ]
     },
     {
-      "name": "module5",
+      "name": "module6",
       "path": "exercices/m05",
       "title": "Module 5",
       "description": "Module 5 description",
