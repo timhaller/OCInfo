@@ -8,10 +8,10 @@ do {
 
 let numbers = [];
 let i = num1;
-while (i <= num2 - num1) {
+console.log(num1, num2);
+while (i <= num2) {
   numbers.push(i);
   i++;
 }
-numbers.push(num2);
 
 alert(numbers.join(", "));

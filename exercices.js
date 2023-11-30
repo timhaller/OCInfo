@@ -9,63 +9,6 @@ document.addEventListener("DOMContentLoaded", async function () {
     terminalOutput.innerHTML += `<p>${text}</p>`;
   }
 
-  //recreating the three js popup windows (alert, prompt, confirm)
-
-  //alert
-  function customAlert(text = "") {
-    terminalOutput.innerHTML += `<p>${text}</p>`;
-  }
-
-  //since window.alert is a function, we can override it
-  window.alert = customAlert;
-
-  //prompt
-  function prompt(text = "") {
-    return new Promise((resolve) => {
-      terminalOutput.innerHTML += `<span id="promptLine"><span>${text} :</span> <input type="text" id="prompt" /></span>`;
-      const promptInput = document.getElementById("prompt");
-      promptInput.focus();
-      let command = "";
-      promptInput.addEventListener("keydown", function (event) {
-        if (event.key === "Enter") {
-          command = promptInput.value.trim();
-          writeToTerminal(`<span>${text} :</span> ${command}`);
-          promptInput.value = "";
-          const promptLine = document.getElementById("promptLine");
-          promptLine.remove();
-          inputField.focus();
-          resolve(command);
-        }
-      });
-    });
-  }
-
-  //confirm
-  async function customConfirm(text = "") {
-    return new Promise((resolve) => {
-      terminalOutput.innerHTML += `<span id="confirmLine"><span>${text} [Y/n]</span> <input type="text" id="confirm" /></span>`;
-      const confirmInput = document.getElementById("confirm");
-      confirmInput.focus();
-      let command = "";
-      confirmInput.addEventListener("keydown", function (event) {
-        if (event.key === "Enter") {
-          command = confirmInput.value.trim().toLowerCase();
-          const accepted = command === "y" || command === "";
-          writeToTerminal(`<span>${text} :</span> ${command}`);
-          confirmInput.value = "";
-          const confirmLine = document.getElementById("confirmLine");
-          confirmLine.remove();
-          inputField.focus();
-          resolve(accepted);
-        }
-      });
-    });
-  }
-
-  function writePath(text) {
-    pathField.innerHTML = `${text}`;
-  }
-
   const files = await fetch("./paths.json")
     .then((response) => response.json())
     .then((data) => {
@@ -76,11 +19,10 @@ document.addEventListener("DOMContentLoaded", async function () {
     return list.find((element) => element.name === path) !== undefined;
   }
 
-  const commands = ["hello", "ls", "cd", "open"]; // Predefined commands for autocompletion
+  const commands = ["hello", "ls", "cd", "open", "clear", "rm"]; // Predefined commands for autocompletion
   const paths = ["module", "exercice"]; // Predefined paths for autocompletion
 
   async function processCommand(command) {
-    // Add your command processing logic here
     switch (command[0]) {
       case "hello":
         writeToTerminal("Hello World!");
@@ -128,20 +70,6 @@ document.addEventListener("DOMContentLoaded", async function () {
         }
         console.log(exercice);
         open(exercice.path);
-        break;
-      case "prompt":
-        console.log(await prompt("Enter your name: "));
-        break;
-      case "confirm":
-        const accepted = await customConfirm("Are you sure?").then((res) =>
-          console.log(res),
-        );
-        break;
-      case "run":
-        let newScript = document.createElement("script");
-        newScript.type = "text/javascript";
-        newScript.src = "./alert.js";
-        document.getElementsByTagName("head")[0].appendChild(newScript);
         break;
       case "rm":
         if (command[1] === "-rf") {

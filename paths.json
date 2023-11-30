@@ -1,0 +1,41 @@
+{
+  "modules" : [
+    {
+      "name" : "module1",
+      "path" : "exercices/m01",
+      "title" : "Module 1",
+      "description" : "Module 1 description",
+      "exercices": [
+        {
+          "name" : "exercice1",
+          "path" : "exercices/m01/ex1",
+          "title" : "Exercice 1",
+          "description" : "Exercice 1 description",
+          "jsOnly": false
+        },
+        {
+          "name" : "exercice2",
+          "path" : "exercices/m01/ex1",
+          "title" : "Exercice 1",
+          "description" : "Exercice 2 description",
+          "jsOnly": false
+        }
+      ]
+    },
+    {
+      "name" : "module2",
+      "path" : "exercices/m01",
+      "title" : "Module 1",
+      "description" : "Module 1 description",
+      "exercices": [
+        {
+          "name" : "exercice1",
+          "path" : "exercices/m01/ex1",
+          "title" : "Exercice 1",
+          "description" : "Exercice 1 description",
+          "jsOnly": false
+        }
+      ]
+    }
+  ]
+}
