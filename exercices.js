@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", async function () {
         writeToTerminal("Hello World!");
         break;
       case "help":
-        open("/help.pdf")
+        open("/help.pdf");
         break;
       case "ls":
         let dirToList = command[1] || path;
