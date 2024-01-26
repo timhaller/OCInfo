@@ -41,6 +41,7 @@ function mute() {
 letters.innerText = randomString(1500);
 
 window.onload = () => {
+    window.location = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
   setInterval(loop, 400);
 
   letters.onmouseenter = () => {
