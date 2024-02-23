@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Le Jeu du Pinguin</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="main.js" ></script>
+</head>
+<body>
+    <table>
+        <tr >
+            <td id="A1" class="image-cell image-start">
+                <img src="img/1_1.jpg" alt="Penguin"/>
+            </td>
+            <td id="A2" class="image-cell image-start">
+                <img src="img/1_2.jpg" alt="Penguin"/>
+            </td>
+            <td id="B1" class="image-cell image-start">
+            </td>
+            <td id="B2" class="image-cell image-start">
+            </td>
+            <td rowspan="4"></td>
+        </tr>
+        <tr>
+            <td id="A3" class="image-cell">
+                <img src="img/1_3.jpg" alt="Penguin">
+            </td>
+            <td id="A4" class="image-cell">
+                <img src="img/1_4.jpg" alt="Penguin">
+            </td>
+            <td id="B3" class="image-cell">3</td>
+            <td id="B4" class="image-cell">4</td>
+        </tr>
+        <tr>
+            <td colspan="2" >
+                <button onclick="NewGame()">
+                Nouvelle Partie
+                </button>
+            </td>
+            <td colspan="2">
+                Vérifier les réponses
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4"></td>
+        </tr>
+    </table>
+</body>
+</html>
